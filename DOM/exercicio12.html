@@ -32,8 +32,15 @@
     </h1>
     <input type="number" name="txtn5" id="txtn5">
     <input type="number" name="txtn6" id="txtn6">
-    <input type="button" value="subtrair" onclick="multiplicar()">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
     <div id="res2">Resultado</div>
+<h1>
+    Dividindo valores
+</h1>
+<input type="number" name="txtn7" id="txtn7">
+<input type="number" name="txtn8" id="txtn8">
+<input type="button" value="dividir" onclick="dividir()">
+<div id="res3">Resultado</div>
 
     <script>
         function somar() {
@@ -65,6 +72,15 @@
             var res = window.document.getElementById("res2")
             res.innerHTML = `A multiplicação entre ${n1} * ${n2} é igual a: <strongs>${s}</strong>`
             
+        }
+        function dividir() {
+            var tn1 = window.document.getElementById("txtn7")
+            var tn2 = window.document.querySelector("input#txtn8");
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1 / n2;
+            var res = window.document.getElementById("res3")
+            res.innerHTML = `A divisão entre ${n1} / ${n2} é igual a: <strongs>${s}</strong>`
         }
     </script>
 </body>
