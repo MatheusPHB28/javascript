@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verficação de Nacionalidade</title>
+    <style>
+        body{
+          font: normal 15pt Arial;
+            text-align: center;
+            background-color: aquamarine;
+            color: brown;
+        }
+        input{
+            font: normal 10pt Arial;
+            margin-top: 10px;
+          text-align: center;
+          border-radius: 5px;
+          border-color: rgb(88, 8, 8);
+          background-color: rgb(104, 206, 143);
+          
+        }
+        input#button{
+            margin top: 10px ;
+        }
+       
+            
+        
+
+    </style>
+</head>
+<body>
+    <h1>Verficação de Nacionalidade </h1>
+    <input type="text" id="país">
+    <br>
+    <input type="button" value="Verificar" onclick="verificarNacionalidade()">
+    <br>
+    <div id ="res" class="resultado">Resultado</div>
+
+    <script>
+        function {
+            var pais = document.querySelector("input#pais").value
+            var menssagem;
+            if (pais.tolowerCase() == "Brasil") {
+              menssagem = "Você é Brasileiro!"
+            } else {
+              menssagem = "Você não é estrangeiro!"
+            }
+            document.getElementById('res')
+        }
+    </script>
+
+
+</body>
+</html>

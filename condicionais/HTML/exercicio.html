@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran - SENAI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+        body{
+            text-align: center;
+            background-color: rgb(8, 76, 179);
+            font-size: 30px;
+        
+        }
+        h1{
+            font-family: "Bungee Spice", sans-serif;
+        }
+        input{
+            font-size: 30px;
+            border: solid;
+            border-radius: 5px;
+            border-color: rgb(8, 53, 53);
+            background-color: rgb(198, 221, 255);
+            text-align: end;
+        }
+        input#button{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <span>Velocidade do carro</span>
+    <input type="number" name="txtvel" id ="txtvel">
+    <span>Km/h</span>
+    <input id="button" type="button" value="Verificar" onclick ="calcular()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function calcular() {
+        var txtv = document.querySelector('input#txtvel')
+        var res = document.querySelector('div#res')
+        var vel = Number(txtv.value)
+        res.innerHTML = `A sua velocidade atual é de <strong>${vel}</strong`
+        res.innerHTML += '<p>Dirija sempre com o cinto de segurança!</p>' 
+
+        if (vel > 60) {
+           res.innerHTML += '<p>Você excedeu a velocidade permitida. MULTADO!</p>'
+
+        }
+        
+    }
+    </script>
+</body>
+</html>
