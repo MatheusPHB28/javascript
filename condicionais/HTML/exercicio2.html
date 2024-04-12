@@ -31,22 +31,22 @@
 </head>
 <body>
     <h1>Verficação de Nacionalidade </h1>
-    <input type="text" id="país">
+    <input type="text" id="pais">
     <br>
     <input type="button" value="Verificar" onclick="verificarNacionalidade()">
     <br>
     <div id ="res" class="resultado">Resultado</div>
 
     <script>
-        function {
-            var pais = document.querySelector("input#pais").value
+        function verificarNacionalidade() {
+            var pais = document.querySelector('input#pais').value
             var menssagem;
-            if (pais.tolowerCase() == "Brasil") {
+            if (pais.toLowerCase() == 'brasil') {
               menssagem = "Você é Brasileiro!"
             } else {
               menssagem = "Você não é estrangeiro!"
             }
-            document.getElementById('res')
+            document.getElementById('res').innerHTML = menssagem
         }
     </script>
 
